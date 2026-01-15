@@ -136,4 +136,3 @@ function safeNormalize(value) {
 function containsAny(text, words) {
   return words.some(w => text.includes(w));
 }
-
