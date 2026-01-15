@@ -49,25 +49,7 @@ function getLabelsByRules(subject, body, from, attachments) {
     'tarifa','precio','costo','liquidacion','contabilidad'
   ])) labels.push('ERP');
 
-  if (containsAny(text, [
-    'bfg','hdr','logistica'
-  ])) labels.push('BFG');
-
-if (
-  containsAny(text, [
-    'sitrack','tracking','seguimiento','guia','escaneo',
-    'remito','destinatario','entregado','en transito',
-    'demorado','retrasado','no llego','prueba de entrega'
-  ]) &&
-  !containsAny(text, [
-    'factura','recibo','orden de pago','pago','cobro',
-    'importe','monto','liquidacion','nota de credito',
-    'nota de debito','comprobante'
-  ])
-) {
-  labels.push('SITRACK');
 }
-
 
   /* ============================
      SUBTIPO: FACTURACIÓN
